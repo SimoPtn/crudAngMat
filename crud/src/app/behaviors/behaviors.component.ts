@@ -13,7 +13,7 @@ import { subscribeOn } from 'rxjs';
   styleUrls: ['./behaviors.component.css']
 })
 export class BehaviorsComponent implements OnInit {
-  displayedColumns: string[] = ['role', 'expectedValue', 'behavior', 'description', 'action'];
+  displayedColumns: string[] = [ 'expectedValue', 'behavior', 'description', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -1,15 +1,15 @@
 <h1 mat-dialog-title> Seleziona Comportamento</h1>
 <div mat-dialog-content>
   <form [formGroup]="behaviorForm">
-    <mat-form-field appearance="outline">
+    <!-- <mat-form-field appearance="outline">
       <mat-label>Ruolo</mat-label>
-      <!-- <input formControlName="role" matInput placeholder="Ruolo"> -->
+      <input formControlName="role" matInput placeholder="Ruolo">
       <mat-select formControlName="role">
         <mat-option *ngFor="let role of roles" [value]="role.viewValue">
           {{role.viewValue}}
         </mat-option>
       </mat-select>
-    </mat-form-field>
+    </mat-form-field> -->
     <mat-form-field appearance="outline">
       <mat-label>Valore Atteso</mat-label>
       <input formControlName="expectedValue" matInput placeholder="Valore Atteso">
