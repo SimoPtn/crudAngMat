@@ -3,10 +3,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BehaviorService } from '../services/behavior.service';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-// interface Role {
-//   value: string;
-//   viewValue: string;
-// }
+ interface Role {
+   value: string;
+  viewValue: string;
+}
 
 // interface Behavior {
 //   value: string;
@@ -23,14 +23,14 @@ export class DialogComponent implements OnInit {
   behaviorForm!: FormGroup;
   actionBtn: string = "Salva";
 
-  // roles: Role[] = [
-  //   { value: 'analyst1', viewValue: 'Analyst 1'},
-  //   { value: 'analyst2', viewValue: 'Analyst 2'},
-  //   { value: 'consultant1', viewValue: 'Consultant 1'},
-  //   { value: 'consultant2', viewValue: 'Consultant 2'},
-  //   { value: 'manager', viewValue: 'Manager'},
-  //   { value: 'seniorManager', viewValue: 'Senior Manager'},
-  // ];
+  roles: Role[] = [
+    { value: 'analyst1', viewValue: 'Analyst 1'},
+    { value: 'analyst2', viewValue: 'Analyst 2'},
+    { value: 'consultant1', viewValue: 'Consultant 1'},
+    { value: 'consultant2', viewValue: 'Consultant 2'},
+    { value: 'manager', viewValue: 'Manager'},
+    { value: 'seniorManager', viewValue: 'Senior Manager'},
+  ];
 
   // behaviors: Behavior[] = [
   //   { value: 'capacitàAnalisi',

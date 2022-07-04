@@ -3,12 +3,12 @@
   <form [formGroup]="behaviorForm">
     <mat-form-field appearance="outline">
       <mat-label>Ruolo</mat-label>
-      <input formControlName="role" matInput placeholder="Ruolo">
-      <!-- <mat-select formControlName="role">
-        <mat-option *ngFor="let role of roles" [value]="role.value">
+      <!-- <input formControlName="role" matInput placeholder="Ruolo"> -->
+      <mat-select formControlName="role">
+        <mat-option *ngFor="let role of roles" [value]="role.viewValue">
           {{role.viewValue}}
         </mat-option>
-      </mat-select> -->
+      </mat-select>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Valore Atteso</mat-label>
