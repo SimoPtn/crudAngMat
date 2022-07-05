@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BehaviorsComponent } from './behaviors/behaviors.component';
+import { BehaviorsGsComponent } from './comportamenti-goal-setting/behaviors-gs/behaviors-gs.component';
 
 const routes: Routes = [
-  { path: '', component: BehaviorsComponent}
+  { path: '', component: BehaviorsGsComponent}
 ];
 
 @NgModule({

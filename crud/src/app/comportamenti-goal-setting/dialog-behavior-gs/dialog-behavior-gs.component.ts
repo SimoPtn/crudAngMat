@@ -15,10 +15,10 @@ import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 // }
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  templateUrl: './dialog-behavior-gs.component.html',
+  styleUrls: ['./dialog-behavior-gs.component.css']
 })
-export class DialogComponent implements OnInit {
+export class DialogBehaviorGsComponent implements OnInit {
 
   behaviorForm!: FormGroup;
   actionBtn: string = "Salva";
@@ -95,7 +95,7 @@ export class DialogComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private behaviorService: BehaviorService,
               @Inject(MAT_DIALOG_DATA) public editData : any,
-              private dialogRef: MatDialogRef<DialogComponent>) { }
+              private dialogRef: MatDialogRef<DialogBehaviorGsComponent>) { }
 
   ngOnInit(): void {
     this.behaviorForm = this.formBuilder.group({

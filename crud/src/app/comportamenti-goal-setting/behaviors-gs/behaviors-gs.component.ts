@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+import { DialogBehaviorGsComponent } from '../dialog-behavior-gs/dialog-behavior-gs.component';
 import { BehaviorService } from '../services/behavior.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
@@ -9,10 +9,10 @@ import { subscribeOn } from 'rxjs';
 
 @Component({
   selector: 'app-behaviors',
-  templateUrl: './behaviors.component.html',
-  styleUrls: ['./behaviors.component.css']
+  templateUrl: './behaviors-gs.component.html',
+  styleUrls: ['./behaviors-gs.component.css']
 })
-export class BehaviorsComponent implements OnInit {
+export class BehaviorsGsComponent implements OnInit {
   displayedColumns: string[] = [ 'expectedValue', 'behavior', 'description', 'action'];
   dataSource!: MatTableDataSource<any>;
 
@@ -25,7 +25,7 @@ export class BehaviorsComponent implements OnInit {
     this.getAllBehaviors();
   }
   openDialog() {
-    this.dialog.open(DialogComponent, {
+    this.dialog.open(DialogBehaviorGsComponent, {
       width: '50%'
     }).afterClosed().subscribe(val=>{
       if(val === 'save') {
@@ -49,7 +49,7 @@ export class BehaviorsComponent implements OnInit {
   }
 
   editBehavior(row : any) {
-    this.dialog.open(DialogComponent,{
+    this.dialog.open(DialogBehaviorGsComponent,{
       width: '50%',
       data:row
     }).afterClosed().subscribe(val=>{

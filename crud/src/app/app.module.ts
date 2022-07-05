@@ -4,12 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BehaviorsComponent } from './behaviors/behaviors.component';
+import { BehaviorsGsComponent } from './comportamenti-goal-setting/behaviors-gs/behaviors-gs.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
+import { DialogBehaviorGsComponent } from './comportamenti-goal-setting/dialog-behavior-gs/dialog-behavior-gs.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -23,8 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    BehaviorsComponent,
-    DialogComponent
+    BehaviorsGsComponent,
+    DialogBehaviorGsComponent,
+
   ],
   imports: [
     BrowserModule,
